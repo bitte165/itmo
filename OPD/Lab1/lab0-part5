@@ -1,0 +1,10 @@
+#!/bin/bash
+cd lab0
+
+rm -f golurk3
+rm -f numel8/alakazam
+rm -f numel8/alakazamgolu*
+rm -f numel8/alakazamdrilb*
+rm -f numel8/*
+rmdir numel8 
+rm -rf pansage9/ralts

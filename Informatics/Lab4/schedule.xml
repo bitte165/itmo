@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schedule>
+   <day>Вт</day>
+   <class_1>
+      <time>
+         <hours>10:00-11:30</hours>
+         <days>четная неделя</days>
+         <room>306 ауд.</room>
+         <address>Кронверкский пр., д.49, лит.А</address>
+      </time>
+      <location>
+         <room>306 ауд.</room>
+         <address>Кронверкский пр., д.49, лит.А</address>
+      </location>
+      <lesson>
+         <name>Информатика</name>
+         <type>Лабораторное занятие</type>
+         <week>четная неделя</week>
+         <professor>Малышева Татьяна Алексеевна</professor>
+      </lesson>
+      <lesson-format>Очно - дистанционный</lesson-format>
+   </class_1>
+   <class_2>
+      <time>
+         <hours>11:40-13:10</hours>
+         <days>четная неделя</days>
+         <room>306 ауд.</room>
+         <address>Кронверкский пр., д.49, лит.А</address>
+      </time>
+      <location>
+         <room>306 ауд.</room>
+         <address>Кронверкский пр., д.49, лит.А</address>
+      </location>
+      <lesson>
+         <name>Информатика</name>
+         <type>Лабораторное занятие</type>
+         <week>четная неделя</week>
+         <professor>Малышева Татьяна Алексеевна </professor>
+      </lesson>
+      <lesson-format>Очно - дистанционный</lesson-format>
+   </class_2>
+   <class_3>
+      <time>
+         <hours>13:30-15:00</hours>
+         <days>четная неделя</days>
+         <room>285 ауд.</room>
+         <address>Кронверкский пр., д.49, лит.А</address>
+      </time>
+      <location>
+         <room>285 ауд.</room>
+         <address>Кронверкский пр., д.49, лит.А</address>
+      </location>
+      <lesson>
+         <name>Дискретная математика</name>
+         <type>Лекция</type>
+         <week>четная неделя</week>
+         <professor>Поляков Владимир Иванович</professor>
+      </lesson>
+      <lesson-format>Очно - дистанционный</lesson-format>
+   </class_3>
+   <class_4>
+      <time>
+         <hours>18:40-20:10</hours>
+         <days>2 ноября</days>
+         <room>Дистанционный</room>
+         <address></address>
+      </time>
+      <location>
+         <room></room>
+         <address></address>
+      </location>
+      <lesson>
+         <name>Математика</name>
+         <type>Лекция</type>
+         <week>Холодова Светлана Евгеньевна</week>
+      </lesson>
+      <lesson-format>Дистанционный</lesson-format>
+   </class_4>
+</schedule>

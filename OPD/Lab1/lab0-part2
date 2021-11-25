@@ -1,0 +1,22 @@
+#!/bin/bash
+cd lab0
+
+chmod a=r drilbur3
+chmod 440 golurk3
+chmod a=wx numel8
+chmod a=,o=rw numel8/whirlpede
+chmod u=rw,g=w,o= numel8/escavalier
+chmod u=rw,g=r,o= numel8/alakazam
+chmod u=rw,g=w,o= numel8/murkrow
+chmod 307 pansage9
+chmod a=,u=rw pansage9/snorlax
+chmod u=rw,g=,o=r pansage9/bronzong
+chmod a=rwx,u-w pansage9/cubchoo
+chmod a=x,u+w pansage9/ralts
+chmod a=r,o-r pansage9/metang
+chmod a=r,u+w,g-r snubbull8
+chmod 771 spheal7
+chmod a=w,u+rx,g+x,o+r spheal7/happiny
+chmod a=r,u-r spheal7/kricketune
+chmod 751 spheal7/crawdaunt
+chmod 551 spheal7/ponyta

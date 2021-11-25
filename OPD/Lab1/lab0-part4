@@ -1,0 +1,10 @@
+#!/bin/bash
+cd lab0
+
+chmod u+r numel8
+cat *8 */*8 */*/*8 | wc -m 1>/tmp/lab0_s338987 2>&1
+ls -lt *3 */*3 */*/*3
+cat pansage9/snorlax pansage9/bronzong pansage9/metang 2>/dev/null | grep "Ki"
+cat numel8/* 2>>/tmp/lab0_s338987 | grep -iv "t$"
+cat s* */s* */*/s* | sort -r
+cat -n pansage9/* 2>/dev/null | grep -i "smi"

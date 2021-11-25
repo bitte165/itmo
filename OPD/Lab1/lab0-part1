@@ -1,0 +1,89 @@
+#!/bin/bash
+mkdir lab0
+cd lab0
+
+touch drilbur3
+echo "Тип покемона  GROUND NONE" > drilbur3
+
+touch golurk3
+cat << EOF 1>golurk3
+Живет  Desert
+Mountain
+EOF
+
+mkdir numel8
+cd numel8
+
+touch whirlpede
+cat << EOF 1>whirlpede
+Возможности  Overland=8 Surface=2 Jump=3 Power=3
+Intelligence=3
+EOF
+
+touch escavalier
+cat << EOF 1>escavalier
+weigth=72.8 height=39.0 atk=14
+def=11
+EOF
+
+touch alakazam
+cat << EOF 1>alakazam
+Ходы  Body Slam Counter Double-Edge Drain Punch
+Dynamicpunch Fire Punch Focus Punch Foul Play Gravity Ice Punch Iron
+Tail Kinesis Knock Off Magic Coat Magic Room Recycle Role Play Magic
+Coat Mega Kick Mega Punch Metronome Seismic Toss Shock Wave Signal
+Beam Skill Swap Sleep Talk Snatch Snore Thunderpunch Trick Wonder Room
+Zen Headbutt
+EOF
+
+touch murkrow
+echo "Развитые способности  Prankster" > murkrow
+
+cd ..
+
+mkdir pansage9
+cd pansage9
+
+touch snorlax
+cat << EOF 1>snorlax
+Ходы
+After You Block Covet Counter Covet Dynamicpunch Fire Punch Focus
+Punch Gunk Shot Headbutt Hyper Voice Ice Punch Icy Wind Iron Head Last
+Resort Mega Kick Mega Punch Metronome Mud-Slap Outrage Psych Up
+Recycle Rollout Seismic Toss Seed Bomb Shock Wave Sleep Talk Snore
+Superpower Thunderpunch Uproar Water Pulse Zen
+Headbutt
+EOF
+
+touch bronzong
+echo "satk=8 sdef=12 spd=3" > bronzong
+
+mkdir cubchoo
+mkdir ralts
+
+touch metang
+cat << EOF 1>metang
+Тип диеты
+Omnivore
+EOF
+
+cd ..
+
+touch snubbull8
+echo "Живет  Forest Urban" > snubbull8
+
+mkdir spheal7
+cd spheal7
+
+mkdir happiny
+
+touch kricketune
+cat << EOF 1>kricketune
+weigth=56.2
+height=39.0 atk=9 def=5
+EOF
+
+mkdir crawdaunt
+mkdir ponyta
+
+cd ..

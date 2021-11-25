@@ -1,0 +1,12 @@
+#!/bin/bash
+cd lab0
+
+ln -s golurk3 numel8/alakazamgolurk
+cp snubbull8 spheal7/crawdaunt
+cat numel8/alakazam numel8/alakazam > golurk3_69
+ln -s pansage9 Copy_79
+ln drilbur3 numel8/alakazamdrilbur
+chmod -R u=rwx pansage9
+cp -R pansage9 temp
+mv temp pansage9/ralts/pansage9
+cp drilbur3 pansage9/bronzongdrilbur
