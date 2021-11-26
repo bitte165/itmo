@@ -1,6 +1,5 @@
-package attacks;
+package ru.bitte.moves;
 
-import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.*;
 
 public class TakeDown extends PhysicalMove {
