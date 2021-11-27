@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 <schedule>
    <day>Вт</day>
-   <class_1>
+   <class id="1">
       <time>
          <hours>10:00-11:30</hours>
          <days>четная неделя</days>
@@ -19,8 +19,8 @@
          <professor>Малышева Татьяна Алексеевна</professor>
       </lesson>
       <lesson-format>Очно - дистанционный</lesson-format>
-   </class_1>
-   <class_2>
+   </class>
+   <class id="2">
       <time>
          <hours>11:40-13:10</hours>
          <days>четная неделя</days>
@@ -35,11 +35,11 @@
          <name>Информатика</name>
          <type>Лабораторное занятие</type>
          <week>четная неделя</week>
-         <professor>Малышева Татьяна Алексеевна </professor>
+         <professor>Малышева Татьяна Алексеевна</professor>
       </lesson>
       <lesson-format>Очно - дистанционный</lesson-format>
-   </class_2>
-   <class_3>
+   </class>
+   <class id="3">
       <time>
          <hours>13:30-15:00</hours>
          <days>четная неделя</days>
@@ -57,8 +57,8 @@
          <professor>Поляков Владимир Иванович</professor>
       </lesson>
       <lesson-format>Очно - дистанционный</lesson-format>
-   </class_3>
-   <class_4>
+   </class>
+   <class id="4">
       <time>
          <hours>18:40-20:10</hours>
          <days>2 ноября</days>
@@ -72,8 +72,9 @@
       <lesson>
          <name>Математика</name>
          <type>Лекция</type>
-         <week>Холодова Светлана Евгеньевна</week>
+         <week></week>
+         <professor>Холодова Светлана Евгеньевна</professor>
       </lesson>
       <lesson-format>Дистанционный</lesson-format>
-   </class_4>
+   </class>
 </schedule>
