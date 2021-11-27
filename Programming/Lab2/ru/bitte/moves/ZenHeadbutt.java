@@ -16,6 +16,6 @@ public class ZenHeadbutt extends PhysicalMove {
 
     @Override
     protected String describe() {
-        return "attacks (Zen Headbutt)";
+        return "использует Zen Headbutt";
     }
 }

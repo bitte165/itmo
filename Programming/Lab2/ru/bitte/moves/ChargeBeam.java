@@ -16,6 +16,6 @@ public class ChargeBeam extends SpecialMove {
 
     @Override
     protected String describe() {
-        return "attacks (Charge Beam)";
+        return "использует Charge Beam";
     }
 }

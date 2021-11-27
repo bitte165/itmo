@@ -15,6 +15,6 @@ public class TakeDown extends PhysicalMove {
 
     @Override
     protected String describe(){
-        return "attacks (Take Down)";
+        return "использует Take Down";
     }
 }

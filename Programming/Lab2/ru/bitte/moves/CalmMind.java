@@ -15,6 +15,6 @@ public class CalmMind extends StatusMove {
 
     @Override
     protected String describe() {
-        return "attacks (Calm Mind)";
+        return "использует Calm Mind";
     }
 }

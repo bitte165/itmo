@@ -16,6 +16,6 @@ public class Psychic extends SpecialMove {
 
     @Override
     protected String describe() {
-        return "attacks (Psychic)";
+        return "использует Psychic";
     }
 }

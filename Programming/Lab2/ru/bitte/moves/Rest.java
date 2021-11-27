@@ -16,6 +16,6 @@ public class Rest extends StatusMove {
 
     @Override
     protected String describe() {
-        return "attacks (Rest)";
+        return "использует Rest";
     }
 }

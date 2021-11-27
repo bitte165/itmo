@@ -16,6 +16,6 @@ public class WaterPulse extends SpecialMove {
 
     @Override
     protected String describe() {
-        return "attacks (Water Pulse)";
+        return "использует Water Pulse";
     }
 }

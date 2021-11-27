@@ -16,6 +16,6 @@ public class Bite extends PhysicalMove {
 
     @Override
     protected String describe() {
-        return "attacks (Bite)";
+        return "использует Bite";
     }
 }

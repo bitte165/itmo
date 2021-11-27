@@ -14,6 +14,6 @@ public class Confide extends StatusMove {
 
     @Override
     protected String describe() {
-        return "attacks (Confide)";
+        return "использует Confide";
     }
 }
