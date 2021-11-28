@@ -1,3 +1,0 @@
-Main-Class: ru.bitte.Main
-Class-Path: Pokemon.jar
-
