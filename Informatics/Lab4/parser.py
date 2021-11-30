@@ -99,6 +99,7 @@ def write_to_file(node, file, n=-1, indent='dict'):
         # case 2: node has a body -> print the body and children if present
         elif node.get_body():
             body = node.get_body()
+            body = body.replace("&gt;", ">").replace("&lt;", ">")
             # tries to format newlines (it's hard)
             if body.startswith("\n") and body.endswith("\n"):
                 body = body[1:-1]
@@ -118,6 +119,7 @@ def write_to_file(node, file, n=-1, indent='dict'):
             # prints children and body in a list
             else:
                 write_line(file, n, node.get_name(), '', indent)
+                print(node.get_name())
                 for child in node.get_children():
                     write_line(file, (n + 1), child.get_name(), ' ' + child.get_body(), 'list')
                 file.write(n * '  ' + '- ' + node.get_body() + "\n")
@@ -145,6 +147,11 @@ def main(args):
     this_node = root
     parents = []
     while i < len(f):
+        # if in_body:
+        #     if f[i] == "h":
+        #         print(f[i + 1:].strip())
+        #         print([x.get_name() for x in parents])
+        #         print(f[i:i + 4])
         if f[i] == '<' and f[i + 1] != '/':
             name = ""
             in_name = True
@@ -165,19 +172,24 @@ def main(args):
             parents.append(this_node)
             this_node = node
             body = ""
-            in_body = True
+        elif f[i - 1] == ">" and f[i - 1]
         elif in_body and f[i] != "<" and f[i] != ">":
             body += f[i]
-        elif f[i] == "<" and f[i + 1] == "/" and f:
+            if f[i:i + 4] == "bruh":
+                print("yes")
+        # elif in_body and
+        #     f[i + 1:].strip()
+        elif f[i] == "<" and f[i + 1] == "/" and not in_name:
             close_tag = f[(i + 2):f.find(">", i)]
             parent_children = [x.get_name() for x in parents[-1].get_children()]
-            if close_tag in parent_children:
-                in_body = False
-                this_node.set_body(body)
-                this_node = parents.pop()
-                body = ""
-            else:
+            # tag presence check
+            in_body = False
+            this_node.set_body(body)
+            this_node = parents.pop()
+            body = ""
+            if close_tag not in parent_children:
                 sys.exit("ParseError: tag error somewhere in '" + parents[-1].get_name() + "'")
+
         i += 1
 
     with open(file_out, "w") as out:
@@ -186,3 +198,5 @@ def main(args):
 
 if __name__ == "__main__":
     main(sys.argv)
+#             if close_tag not in parent_children:
+#                 sys.exit("ParseError: tag error somewhere in '" + parents[-1].get_name() + "'")
