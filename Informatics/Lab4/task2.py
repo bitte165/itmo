@@ -49,7 +49,6 @@ while i < len(f):
         in_body = False
         this_node.set_body(body)
         this_node = parents.pop()
-
         body = ""
     i += 1
 

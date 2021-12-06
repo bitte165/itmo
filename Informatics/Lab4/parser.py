@@ -15,7 +15,7 @@ class Node:
             child.__parent = self
 
     def set_body(self, body):
-        body = body.replace("&gt;", ">").replace("&lt;", ">")
+        body = body.replace("&gt;", ">").replace("&lt;", ">").replace("&#38;", "&")
         self.__body = body
 
     def get_name(self):
@@ -35,7 +35,6 @@ def open_xml(file):
     with open(file) as file:
         file = file.read()
     # change formatting from 3 spaces to 2 spaces
-    file = file.replace("   ", "  ")
     # validate header if present and remove it for parsing
     header = file[file.find('<', 0):file.find('>', 0) + 1]
     if header.startswith("<?xml ") and header.endswith("?>"):
@@ -106,8 +105,10 @@ def write_to_file(node, file, n=-1, indent='dict'):
         elif node.get_body():
             body = node.get_body()
             # tries to format newlines (it's hard)
-            if "\n" in body.strip():
+            if "\n  " in body.strip():
                 body = ">" + body
+            elif "\n" in body.strip():
+                body = "'" + body.replace("\n", r"\n")
             if ": " in body or ((body.startswith(" ") or body.endswith(" ")) and "\n" not in body):
                 if "'" not in body:
                     body = "'" + body + "'"
@@ -141,7 +142,7 @@ def main(args):
         sys.exit(usage)
 
     i = 0
-    f = open_xml(file_in)
+    f = open_xml(file_in).replace("   ", "  ")
     name = body = ""
     in_name = in_body = False
     root = Node("root")
@@ -179,12 +180,15 @@ def main(args):
         elif f[i] == "<" and f[i + 1] == "/":
             close_tag = f[(i + 2):f.find(">", i)]
             parent_children = [x.get_name() for x in parents[-1].get_children()]
+
             in_body = False
             this_node.set_body(body)
             this_node = parents.pop()
             body = ""
+
             if close_tag not in parent_children:
                 sys.exit("ParseError: tag error somewhere in '" + parents[-1].get_name() + "'")
+
         i += 1
 
     with open(file_out, "w") as out:
