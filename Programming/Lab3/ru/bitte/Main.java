@@ -9,7 +9,7 @@ public class Main {
         dunno.getEmployed();
         dunno.walk(street);
         dunno.enter(house);
-        Bench bench = new Bench( "Лавочка");
+        Bench bench = new Bench("Лавочка");
         Shorty shorties = new Shorty("Коротышки", room);
         Shorty shorty = new Shorty("Коротышка", room);
         bench.addMembers(shorties, shorty);
@@ -36,6 +36,5 @@ public class Main {
             }
             System.out.println(a[a.length - 1].getDescription());
         }
-
     }
 }

@@ -52,7 +52,7 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return getClass().getName() + "[name=" + name + ",status=" + status + ",currentLocation=" + currentLocation.getName()
-                + "]";
+        return getClass().getName() + "[name=" + name + ",status=" + status + ",currentLocation=" //
+                + currentLocation.getName() + "]";
     }
 }
