@@ -3,37 +3,56 @@ package ru.bitte;
 import java.util.Objects;
 
 public abstract class Person {
-    protected final String name;
+    private final String name;
+    private Location currentLocation;
+    protected String status;
     public Person(String n, Location l) {
         name = n;
         currentLocation = l;
     }
 
-    public void enter(House h) {
-        System.out.println(name + " заходит в место " + h.getName());
-        setLocation(h.getRoom());
-        System.out.println(name +  " попадает в помещение " + h.getRoom().getName());
-    }
-
-    public void enter(Room r) {
-        setLocation(r);
-        System.out.println(name +  " заходит в помещение " + r.getName());
-    }
-
-
-    protected String status;
-
-    public String getStatus() {
-        return "Статус: сущность " + status;
-    }
-
-    protected Location currentLocation;
     protected void setLocation(Location l) {
         currentLocation = l;
     }
 
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void getStatus() {
+        System.out.println("Статус сущности " + getName() + ": сущность " + status);
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void enter(Location  l) {
+        setLocation(l);
+        System.out.println(name +  " заходит в помещение " + l.getName());
+        if (l.getInnerLocation() != null) {
+            setLocation(l.getInnerLocation());
+            System.out.println(name +  " попадает в помещение " + l.getInnerLocation().getName());
+        }
+    }
+
+    public void leave() {
+        System.out.println(name +  " покидает помещение " + currentLocation.getName());
+        setLocation(null);
+    }
+
+    public void currentLocation() {
+        System.out.println(name +  " находится в помещении " + currentLocation.getName());
+    }
+
+    public void see(Seeable obj) {
+        if (obj instanceof Person) {
+            System.out.println(getName() + " увидел сущность " + obj.getName());
+        } else if (obj instanceof Location) {
+            System.out.println(getName() + " увидел " + obj.getName());
+        } else {
+            System.out.println(getName() + " видит " + obj.getName());
+        }
     }
 
     @Override

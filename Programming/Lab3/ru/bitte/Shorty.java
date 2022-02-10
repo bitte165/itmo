@@ -6,7 +6,7 @@ public class Shorty extends Person implements Seeable {
     }
 
     public void tell(Person p, String message) {
-        System.out.println(name +  " говорит сущности " + p.getName() + ": \"" + message + "\"");
+        System.out.println(getName() +  " говорит сущности " + p.getName() + ": \"" + message + "\"");
     }
 
 }

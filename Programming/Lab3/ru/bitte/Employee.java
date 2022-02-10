@@ -6,6 +6,6 @@ public class Employee extends Person implements Seeable {
     }
 
     public void speakOnPhone() {
-        System.out.println(name + " разговаривает по телефону ");
+        System.out.println(getName() + " разговаривает по телефону ");
     }
 }

@@ -3,13 +3,19 @@ package ru.bitte;
 import java.util.Objects;
 
 public abstract class Location {
-    private String name;
-    public Location(String n) {
+    private final String name;
+    private final Location innerLocation;
+    public Location(String n, Location l) {
         name = n;
+        innerLocation = l;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Location getInnerLocation() {
+        return innerLocation;
     }
 
     @Override

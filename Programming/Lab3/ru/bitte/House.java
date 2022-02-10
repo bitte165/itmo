@@ -1,13 +1,14 @@
 package ru.bitte;
 
 public class House extends Location implements Seeable {
-    private Room room;
-    public House(String n, Room r) {
-        super(n);
-        room = r;
+    public House(String n) {
+        super(n, new Room("Комната"));
     }
 
-    public Room getRoom() {
-        return room;
+
+    public static class Room extends Location {
+        public Room(String n) {
+            super(n, null);
+        }
     }
 }

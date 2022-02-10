@@ -6,24 +6,47 @@ public class Dunno extends Person {
     }
 
     public void getEmployed() {
+//        class Hope {
+//            private boolean isPresent = false;
+//            void giveHope() {
+//                isPresent = true;
+//            }
+//            boolean hopeStatus() {
+//                return isPresent;
+//            }
+//        }
+//        Hope hope = new Hope();
+        Emotion hope = new Emotion() {
+            @Override
+            void setEmotion(String e) {
+                emotion = e;
+                if (!(emotion.equals(""))) {
+                    boolean hopeIsPresent = true;
+                } else {
+                    boolean hopeIsPresent = false;
+                }
+            }
+        };
+        hope.setEmotion("появилась надежда");
         System.out.println(getName() + " устроился на работу, появилась надежда зарабоать деньги");
     }
 
-    public void see(Seeable obj) {
-        if (obj instanceof Person) {
-            System.out.println(getName() + " увидел сущность " + obj.getName());
-        } else if (obj instanceof Location) {
-            System.out.println(name + " увидел " + obj.getName());
-        }
-    }
-
-    public void walk(Street s) {
-        System.out.println(name + " идёт по месту " + s.getName());
-        see(s.getHouse());
+    public void walk(Location s) {
+        System.out.println(getName() + " идёт по месту " + s.getName());
     }
 
     public void ask(Person p, String question) {
-        System.out.println(name + " спрашивает сущность " + p.getName() + ", " + question);
+        System.out.println(getName() + " спрашивает сущность " + p.getName() + ", " + question);
     }
 
+    public class Emotion {
+        protected String emotion = "flat";
+        void setEmotion(String e) {
+            emotion = e;
+            System.out.println("Эмоция сущности " + getName() + " сменилась на " +  e);
+        }
+        String getEmotion() {
+            return emotion;
+        }
+    }
 }
