@@ -33,4 +33,3 @@ f_c = 1/2 - 1/(2*exp(2))
 message("h = ", h)
 message("|f-s| = ", abs(f_c - s))
 message("s = ", s)
-# s = 0
